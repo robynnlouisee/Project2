@@ -13,5 +13,17 @@
 let computerChoice = getComputerChoice();
     console.log(computerChoice);
 
-    
+    function getHumanChoice () {
+      let sign = prompt("rock, paper, or scissors?");
+
+       if (sign === "rock") {
+        return "rock"
+       } else if (sign === "paper") {
+        return "paper"
+       } else if (sign === "scissors") {
+        return "scissors"
+       }
+    }
+    let humanChoice = getHumanChoice();
+    console.log(humanChoice);
 </script>
