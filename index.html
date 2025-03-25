@@ -10,8 +10,7 @@
             return"scissors"
     }
 }
-let computerChoice = getComputerChoice();
-    console.log(computerChoice);
+
 
     function getHumanChoice () {
       let sign = prompt("rock, paper, or scissors?");
@@ -24,10 +23,30 @@ let computerChoice = getComputerChoice();
         return "scissors"
        }
     }
-    let humanChoice = getHumanChoice();
-    console.log(humanChoice);
+
 
     let humanScore = 0;
-
     let computerScore = 0;
+
+    function playRound (humanChoice, computerChoice) {
+        humanChoice = humanChoice.toLowerCase();
+        computerChoice = computerChoice.toLowerCase();
+        if (humanChoice === computerChoice) {
+            console.log(`It's a tie! You both chose ${humanChoice}.`);
+            return;
+        }
+        if(
+            (humanChoice === "rock" && computerChoice === "scissors") ||
+            (humanChoice === "scissors" && computerChoice === "paper") ||
+            (humanChoice === "paper" && computerChoice === "rock") 
+    ){
+                console.log(`You win! ${humanChoice} beats ${compuerChoice}.`);
+            } else {
+                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+            }
+            }
+
+playRound(getHumanChoice(), getComputerChoice());
+
+
 </script>
